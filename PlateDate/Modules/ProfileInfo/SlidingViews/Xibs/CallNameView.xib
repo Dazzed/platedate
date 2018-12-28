@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Bold.otf">
+            <string>SourceSansPro-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CallNameView" customModule="PlateDate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-js-o69">
+                    <rect key="frame" x="55" y="109.5" width="266" height="51"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qq0-DQ-4a7">
+                            <rect key="frame" x="15" y="0.0" width="251" height="51"/>
+                            <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                    <color key="value" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Qq0-DQ-4a7" firstAttribute="leading" secondItem="7gf-js-o69" secondAttribute="leading" constant="15" id="cHQ-9k-EtQ"/>
+                        <constraint firstAttribute="height" constant="51" id="eDx-8f-pXH"/>
+                        <constraint firstItem="Qq0-DQ-4a7" firstAttribute="top" secondItem="7gf-js-o69" secondAttribute="top" id="flA-3n-Uhb"/>
+                        <constraint firstAttribute="trailing" secondItem="Qq0-DQ-4a7" secondAttribute="trailing" id="o5M-SB-Yz7"/>
+                        <constraint firstAttribute="bottom" secondItem="Qq0-DQ-4a7" secondAttribute="bottom" id="quk-c9-4de"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What should we call you?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phx-6X-6yD">
+                    <rect key="frame" x="77.5" y="45" width="220.5" height="25.5"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="20"/>
+                    <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7gf-js-o69" firstAttribute="top" secondItem="Phx-6X-6yD" secondAttribute="bottom" constant="39" id="6fn-4O-hj9"/>
+                <constraint firstItem="7gf-js-o69" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="55" id="E9H-Z9-GS8"/>
+                <constraint firstItem="Phx-6X-6yD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MBM-2I-VXk"/>
+                <constraint firstItem="Phx-6X-6yD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="25" id="VqV-rG-tvA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7gf-js-o69" secondAttribute="trailing" constant="54" id="sGx-aA-Xha"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="callNameTextField" destination="Qq0-DQ-4a7" id="Yr2-Nm-v6w"/>
+            </connections>
+            <point key="canvasLocation" x="11" y="55"/>
+        </view>
+    </objects>
+</document>
