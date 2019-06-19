@@ -1,0 +1,9 @@
+{
+  "commitish" : "3.1.0",
+  "iOS" : [
+    {
+      "name" : "ImagePicker",
+      "hash" : "57f3489d4d1e2de7e6a6057ee6128d8e24d99c41c65c83be715f42835130885e"
+    }
+  ]
+}
