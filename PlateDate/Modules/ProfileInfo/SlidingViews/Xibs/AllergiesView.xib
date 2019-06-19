@@ -21,13 +21,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any allergies?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ce8-5x-IBq">
-                    <rect key="frame" x="127" y="45" width="122" height="26"/>
+                    <rect key="frame" x="127" y="45" width="122" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="a27-xp-Xvq"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="20"/>
                     <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POR-fi-Nj2">
-                    <rect key="frame" x="0.0" y="110" width="375" height="537"/>
+                    <rect key="frame" x="0.0" y="100" width="375" height="547"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uhT-IU-RM6">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="537"/>
@@ -51,7 +54,7 @@
                 <constraint firstItem="Ce8-5x-IBq" firstAttribute="top" secondItem="AVl-Gs-mJy" secondAttribute="top" constant="25" id="8nO-pu-fL3"/>
                 <constraint firstItem="uhT-IU-RM6" firstAttribute="width" secondItem="OOX-JV-PO6" secondAttribute="width" id="BZV-G9-6Be"/>
                 <constraint firstItem="Ce8-5x-IBq" firstAttribute="centerX" secondItem="OOX-JV-PO6" secondAttribute="centerX" id="jp9-OO-lSW"/>
-                <constraint firstItem="POR-fi-Nj2" firstAttribute="top" secondItem="Ce8-5x-IBq" secondAttribute="bottom" constant="39" id="re3-fH-ywf"/>
+                <constraint firstItem="POR-fi-Nj2" firstAttribute="top" secondItem="Ce8-5x-IBq" secondAttribute="bottom" constant="30" id="re3-fH-ywf"/>
                 <constraint firstItem="AVl-Gs-mJy" firstAttribute="bottom" secondItem="POR-fi-Nj2" secondAttribute="bottom" constant="20" id="sbr-LE-EkV"/>
                 <constraint firstItem="POR-fi-Nj2" firstAttribute="leading" secondItem="AVl-Gs-mJy" secondAttribute="leading" id="xQ6-tj-mPa"/>
                 <constraint firstItem="AVl-Gs-mJy" firstAttribute="trailing" secondItem="POR-fi-Nj2" secondAttribute="trailing" id="xV0-Zt-d7v"/>

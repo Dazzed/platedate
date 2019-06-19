@@ -1,88 +1,88 @@
 PODS:
-  - Alamofire (4.7.2)
+  - Alamofire (4.8.0)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
-  - FacebookCore (0.3.0):
-    - Bolts (~> 1.8)
-    - FBSDKCoreKit (~> 4.27)
-  - FacebookLogin (0.3.0):
-    - Bolts (~> 1.8)
-    - FacebookCore (~> 0.3)
-    - FBSDKCoreKit (~> 4.27)
-    - FBSDKLoginKit (~> 4.27)
-  - FacebookShare (0.3.0):
-    - Bolts (~> 1.8)
-    - FacebookCore (~> 0.3)
-    - FBSDKCoreKit (~> 4.27)
-    - FBSDKShareKit (~> 4.27)
-  - FBSDKCoreKit (4.32.0):
-    - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.32.0):
+  - DynamicBlurView (2.0.2)
+  - EasyPopUp (0.1.0):
+    - DynamicBlurView (~> 2.0)
+  - FBSDKCoreKit (4.38.1):
+    - Bolts (~> 1.9)
+  - FBSDKLoginKit (4.38.1):
     - FBSDKCoreKit
-  - FBSDKShareKit (4.32.0):
-    - FBSDKCoreKit (~> 4.32.0)
+  - ImagePicker (3.1.0)
+  - IQKeyboardManagerSwift (6.2.0)
   - Kingfisher (4.7.0)
-  - KWVerificationCodeView (0.1.5)
-  - PageMenu (2.0.0)
-  - Realm (3.3.2):
-    - Realm/Headers (= 3.3.2)
-  - Realm/Headers (3.3.2)
-  - RealmSwift (3.3.2):
-    - Realm (= 3.3.2)
-  - SwiftyJSON (4.1.0)
+  - KWVerificationCodeView (0.3.0)
+  - Parse (1.17.2):
+    - Parse/Core (= 1.17.2)
+  - Parse/Core (1.17.2):
+    - Bolts/Tasks (~> 1.9)
+  - Realm (3.13.0):
+    - Realm/Headers (= 3.13.0)
+  - Realm/Headers (3.13.0)
+  - RealmSwift (3.13.0):
+    - Realm (= 3.13.0)
+  - SendGrid-Swift (0.1.2)
+  - TableViewDragger (1.3.0)
   - TPKeyboardAvoiding (1.3.2)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.7)
-  - FacebookCore
-  - FacebookLogin
-  - FacebookShare
+  - Alamofire
+  - EasyPopUp
+  - FBSDKCoreKit (~> 4.38.0)
+  - FBSDKLoginKit (~> 4.38.0)
+  - ImagePicker
+  - IQKeyboardManagerSwift
   - Kingfisher (= 4.7.0)
   - KWVerificationCodeView
-  - PageMenu
+  - Parse
+  - Realm
   - RealmSwift
-  - SwiftyJSON (~> 4.0)
-  - TPKeyboardAvoiding (~> 1.3)
+  - SendGrid-Swift
+  - TableViewDragger
+  - TPKeyboardAvoiding
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Bolts
-    - FacebookCore
-    - FacebookLogin
-    - FacebookShare
+    - DynamicBlurView
+    - EasyPopUp
     - FBSDKCoreKit
     - FBSDKLoginKit
-    - FBSDKShareKit
+    - ImagePicker
+    - IQKeyboardManagerSwift
     - Kingfisher
     - KWVerificationCodeView
-    - PageMenu
+    - Parse
     - Realm
     - RealmSwift
-    - SwiftyJSON
+    - SendGrid-Swift
+    - TableViewDragger
     - TPKeyboardAvoiding
 
 SPEC CHECKSUMS:
-  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
-  FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
-  FacebookShare: 0469964297ebd75f052be2c5083389a4208e82b7
-  FBSDKCoreKit: 55d7f2ac45d9c4b9b6119f4e43900fe84b9b7b1b
-  FBSDKLoginKit: 32ac05c2a59952c363c2e85aafa8f73ba93bcbad
-  FBSDKShareKit: 658780d0d108b8ad590a54afb5ac1427bdc8de28
+  DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
+  EasyPopUp: da8f540059818ea7bff8341f7760e0e955678c14
+  FBSDKCoreKit: 8d47857400e2f5bdea697a80daff882e91c84ef6
+  FBSDKLoginKit: 4621c690d9dd8628031a4791497062183ea34b0d
+  ImagePicker: db1fd7626337b2577c523bef5f499bbbe5a37079
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
-  KWVerificationCodeView: 2addfa688157fad0347a8027ae849f81e4ebae84
-  PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
-  Realm: d927fbf66df5532cfafc08afb5f7e53ded37b894
-  RealmSwift: 4e903a494e05d866581d69ad6f7e7b879d446baf
-  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  KWVerificationCodeView: ad0d493e30d203c45f21f3d7b6a4d2b64be53252
+  Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
+  Realm: 5edd2ee65406aef591a4f9895de5a3440e51b3d8
+  RealmSwift: be5ebc7930e37cd3376b41cec7f21984528aaa16
+  SendGrid-Swift: ac2a563f564d95e9c8e069db337279b442bed67e
+  TableViewDragger: 5933729a18d1606e16388d72f6d4fe5f3a0bcaf4
   TPKeyboardAvoiding: cb69d5ddbe90ce0170e4bc2db1e5e41d4a3ad9a4
 
-PODFILE CHECKSUM: e789b8ab4f6b1fb3080180dfd0e30179feced314
+PODFILE CHECKSUM: d3bdfcce275938e42a05c94ea95cb956236138fe
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.2

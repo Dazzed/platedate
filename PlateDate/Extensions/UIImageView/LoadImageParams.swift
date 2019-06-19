@@ -5,9 +5,10 @@
 //  Created by WebCrafters on 01/12/18.
 //  Copyright © 2018 WebCrafters. All rights reserved.
 //
-
+//Shivasparrow1
 import UIKit
-
+//95856 59622
+// Mark: - Params with ImageView
 struct LoadImageParams {
     
     let backgroundColor: UIColor

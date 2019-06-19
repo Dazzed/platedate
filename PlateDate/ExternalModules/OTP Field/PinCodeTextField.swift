@@ -303,8 +303,7 @@ import UIKit
             }
         }
     }
-    
-    
+
     //MARK: Text processing
     func canInsertCharacter(_ character: String) -> Bool {
         let newText = text.map { $0 + character } ?? character
@@ -314,7 +313,6 @@ import UIKit
         return !isNewline && isCharacterMatchingCharacterSet && isLengthWithinLimit
     }
 }
-
 
 //MARK: UIKeyInput
 extension PinCodeTextField: UIKeyInput {

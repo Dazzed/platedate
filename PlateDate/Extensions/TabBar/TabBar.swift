@@ -20,11 +20,20 @@ extension UIImage {
     }
 }
 
-//Mark: - TabBar Height
+////Mark: - TabBar Height
 extension UITabBar {
     override open func sizeThatFits(_ size: CGSize) -> CGSize {
         var sizeThatFits = super.sizeThatFits(size)
-        sizeThatFits.height = 60
+        if UIDevice().userInterfaceIdiom == .phone {
+            switch UIScreen.main.nativeBounds.height {
+            case 1136, 1334, 1920, 2208:
+                sizeThatFits.height = 55
+            case 2436, 2688, 1792:
+                sizeThatFits.height = 71
+        default:
+            print("Unknown")
+        }
+    }
         return sizeThatFits
     }
 }

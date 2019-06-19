@@ -18,10 +18,11 @@ import UIKit
         static let _lightGray1 = UIColor("#E9E9E9")
         static let _lightGray2 = UIColor("#B7B7B7")
         static let _lightGrayShadow = UIColor("#CDCAC2")
-         static let _lightGray3 = UIColor("#4D4D4D")
-
-        //Ref
+        static let _lightGray3 = UIColor("#4D4D4D")
         static let _lightGray4 = UIColor("#808080")
+        static let _lightGray5 = UIColor("#969696")
+        static let _lightGraySeparator = UIColor("#DFDFDF")
+        static let _bottomBorderGray = UIColor("#E1E1E1")
     }
 
 extension UIColor {

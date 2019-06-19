@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Bold.otf">
+            <string>SourceSansPro-Bold</string>
+        </array>
+        <array key="SourceSansPro-Regular.otf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+        <array key="SourceSansPro-Semibold.otf">
+            <string>SourceSansPro-Semibold</string>
+        </array>
+        <array key="YesevaOne-Regular_v2.otf">
+            <string>YesevaOne</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileBookMarkCell" rowHeight="230" id="MT1-ea-xN8" customClass="ProfileBookMarkTableViewCell" customModule="PlateDate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="406" height="441"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MT1-ea-xN8" id="DBc-iU-aa3">
+                <rect key="frame" x="0.0" y="0.0" width="406" height="440.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49n-hr-1SV">
+                        <rect key="frame" x="23" y="239.5" width="360" height="201"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tajin-Lime Cucumbers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nX-13-RcK">
+                                <rect key="frame" x="15" y="30" width="205" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="YQ3-11-xdC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="YesevaOne" family="Yeseva One" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nw7-gA-ZTk">
+                                <rect key="frame" x="321.5" y="27.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="AJE-2l-gtX"/>
+                                    <constraint firstAttribute="width" constant="25" id="LTV-zS-NRT"/>
+                                </constraints>
+                                <state key="normal" image="Bookmark orange.png"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lLy-w5-zoP" customClass="ProfileImageView" customModule="PlateDate" customModuleProvider="target">
+                                <rect key="frame" x="15" y="63" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="OK8-Us-np9"/>
+                                    <constraint firstAttribute="height" constant="25" id="dNo-xb-8M1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cht-Tz-BDo">
+                                <rect key="frame" x="50" y="68" width="57" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="VCP-7z-gH5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="12"/>
+                                <color key="textColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This treat is favourite of m" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snD-dv-eE7">
+                                <rect key="frame" x="15" y="97" width="330" height="60"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="14"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 HOURS AGO " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gda-P0-nC0">
+                                <rect key="frame" x="15" y="167" width="78" height="15.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15.33" id="OIS-Ga-4E4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
+                                <color key="textColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lLy-w5-zoP" firstAttribute="top" secondItem="9nX-13-RcK" secondAttribute="bottom" constant="13" id="2cy-FK-4mS"/>
+                            <constraint firstAttribute="trailing" secondItem="Nw7-gA-ZTk" secondAttribute="trailing" constant="13.5" id="GMJ-cL-nvS"/>
+                            <constraint firstItem="Nw7-gA-ZTk" firstAttribute="centerY" secondItem="9nX-13-RcK" secondAttribute="centerY" id="Hyv-9P-4Q8"/>
+                            <constraint firstItem="Gda-P0-nC0" firstAttribute="top" secondItem="snD-dv-eE7" secondAttribute="bottom" constant="10" id="OIL-Ku-uaU"/>
+                            <constraint firstItem="9nX-13-RcK" firstAttribute="top" secondItem="49n-hr-1SV" secondAttribute="top" constant="30" id="PBe-Px-DYE"/>
+                            <constraint firstAttribute="trailing" secondItem="snD-dv-eE7" secondAttribute="trailing" constant="15" id="QMu-4F-Gz2"/>
+                            <constraint firstItem="cht-Tz-BDo" firstAttribute="centerY" secondItem="lLy-w5-zoP" secondAttribute="centerY" id="Rk9-dw-Kj5"/>
+                            <constraint firstAttribute="bottom" secondItem="Gda-P0-nC0" secondAttribute="bottom" constant="18.5" id="d6j-dZ-rYF"/>
+                            <constraint firstItem="9nX-13-RcK" firstAttribute="leading" secondItem="49n-hr-1SV" secondAttribute="leading" constant="15" id="fcc-Va-DxK"/>
+                            <constraint firstItem="Gda-P0-nC0" firstAttribute="leading" secondItem="49n-hr-1SV" secondAttribute="leading" constant="15" id="m2X-S8-vei"/>
+                            <constraint firstItem="snD-dv-eE7" firstAttribute="top" secondItem="lLy-w5-zoP" secondAttribute="bottom" constant="9" id="mCp-T8-kr9"/>
+                            <constraint firstItem="cht-Tz-BDo" firstAttribute="leading" secondItem="lLy-w5-zoP" secondAttribute="trailing" constant="10" id="oN6-Xe-fCF"/>
+                            <constraint firstItem="snD-dv-eE7" firstAttribute="leading" secondItem="49n-hr-1SV" secondAttribute="leading" constant="15" id="vsz-cc-bq8"/>
+                            <constraint firstItem="lLy-w5-zoP" firstAttribute="leading" secondItem="49n-hr-1SV" secondAttribute="leading" constant="15" id="yw0-m1-bhB"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.20000000000000001" height="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eE0-xm-7wa" customClass="RoundShadowView" customModule="PlateDate" customModuleProvider="target">
+                        <rect key="frame" x="23" y="23" width="360" height="231.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xsa-1w-395">
+                                <rect key="frame" x="0.0" y="0.0" width="360" height="231.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="231.66999999999999" id="qtS-aU-Ih3"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xsa-1w-395" firstAttribute="top" secondItem="eE0-xm-7wa" secondAttribute="top" id="JjC-21-iqh"/>
+                            <constraint firstAttribute="bottom" secondItem="xsa-1w-395" secondAttribute="bottom" id="M19-AW-d0f"/>
+                            <constraint firstAttribute="trailing" secondItem="xsa-1w-395" secondAttribute="trailing" id="axG-ag-BuF"/>
+                            <constraint firstItem="xsa-1w-395" firstAttribute="leading" secondItem="eE0-xm-7wa" secondAttribute="leading" id="efg-TJ-m0c"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="49n-hr-1SV" firstAttribute="leading" secondItem="eE0-xm-7wa" secondAttribute="leading" id="0bm-df-f96"/>
+                    <constraint firstItem="49n-hr-1SV" firstAttribute="top" secondItem="eE0-xm-7wa" secondAttribute="bottom" constant="-15" id="2J0-BT-Ued"/>
+                    <constraint firstItem="eE0-xm-7wa" firstAttribute="leading" secondItem="DBc-iU-aa3" secondAttribute="leading" constant="23" id="CN9-cG-4qu"/>
+                    <constraint firstItem="eE0-xm-7wa" firstAttribute="top" secondItem="DBc-iU-aa3" secondAttribute="top" constant="23" id="Zj3-NE-zDA"/>
+                    <constraint firstAttribute="bottom" secondItem="49n-hr-1SV" secondAttribute="bottom" id="b1g-Wl-ccK"/>
+                    <constraint firstAttribute="trailing" secondItem="eE0-xm-7wa" secondAttribute="trailing" constant="23" id="dBf-fl-NDd"/>
+                    <constraint firstItem="49n-hr-1SV" firstAttribute="trailing" secondItem="eE0-xm-7wa" secondAttribute="trailing" id="eve-AS-wyp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="3ki-Me-r4M"/>
+            <connections>
+                <outlet property="bottomView" destination="49n-hr-1SV" id="zeb-Cf-XwT"/>
+                <outlet property="mainView" destination="DBc-iU-aa3" id="MuL-uq-l0g"/>
+                <outlet property="profileBookMarkImageView" destination="xsa-1w-395" id="Fy9-8T-dpW"/>
+                <outlet property="recipeBookMarkButton" destination="Nw7-gA-ZTk" id="LoZ-iq-YLS"/>
+                <outlet property="recipeDescriptionLabel" destination="snD-dv-eE7" id="Lzv-T5-ztG"/>
+                <outlet property="recipeTimeLabel" destination="Gda-P0-nC0" id="gLp-ww-86c"/>
+                <outlet property="recipeTitleLabel" destination="9nX-13-RcK" id="Iua-tS-Q8o"/>
+                <outlet property="recipeUserImageView" destination="lLy-w5-zoP" id="cMS-9T-TQ2"/>
+                <outlet property="recipeUserNameLabel" destination="cht-Tz-BDo" id="63D-2R-VfB"/>
+            </connections>
+            <point key="canvasLocation" x="160" y="-210.96059113300493"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="11.jpg" width="463" height="463"/>
+        <image name="2.jpg" width="1125" height="843.75"/>
+        <image name="Bookmark orange.png" width="50" height="50"/>
+    </resources>
+</document>

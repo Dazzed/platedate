@@ -1,11 +1,3 @@
-//
-//  KWTextFieldView.swift
-//  Pods
-//
-//  Created by KeepWorks on 13/01/17.
-//  Copyright © 2017 KeepWorks Technologies Pvt Ltd. All rights reserved.
-//
-
 import UIKit
 
 protocol KWTextFieldDelegate: class {

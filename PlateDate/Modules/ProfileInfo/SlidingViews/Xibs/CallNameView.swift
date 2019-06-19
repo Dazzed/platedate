@@ -21,7 +21,7 @@ class CallNameView: UIView {
 
     required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
-        setup()
+        setup() 
     }
 
     //MARK: - Private Methods

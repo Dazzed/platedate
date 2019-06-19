@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "97610B08DB673796360FCEB075B7B2F4"
+               BlueprintIdentifier = "BF072B2E5120FB722E8A4979AAA65DE3"
+               BuildableName = "KWVerificationCodeView.framework"
                BlueprintName = "KWVerificationCodeView"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "KWVerificationCodeView.framework">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

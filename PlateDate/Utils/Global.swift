@@ -16,6 +16,7 @@ struct ViewController {
         static let dashBaord = "DashBoard"
         static let profileInfo = "ProfileInfo"
         static let recipeDetail = "RecipeDetail"
+        static let addRecipe = "AddRecipe"
     }
 
     // Mark: - Class Name
@@ -34,24 +35,31 @@ struct ViewController {
 
         // Mark: - DashBaord
         static let pageController = "Page"
+
+        // Mark: - AddRecipe
+        static let addRecipe = "AddRecipeViewController"
     }
 
     // Mark: - StoryBoard ID
     struct StoryBoardId {
+
         // Mark: - Auth StoryBoard
         static let loginStoryBoardId = "Login"
         static let mobileLoginStoryBoardId = "MobileLogin"
         static let otpVerificationStoryBoardId = "OtpVerification"
         static let emailLoginStoryBoardId = "EmailLogin"
         static let checkEmailStoryBoardId = "CheckEmail"
+        static let slideStoryBoardId = "Slide"
         static let swipeStoryBoardId = "Swipe"
 
         // Mark: - DashBaord StoryBoard
-        static let pageControllerStoryBoardId = "CheckEmail"
-
-
-        // Mark: - DashBaord StoryBoard
         static let homeStoryBoardId = "Home"
+
+        // Mark: - Recipe Detail StoryBoard
+        static let recipeDetailStoryBoardId = "RecipeDetail"
+
+        // Mark: - AddRecipe
+        static let addRecipeStoryBoardId = "AddRecipe"
     }
 }
 
@@ -61,24 +69,51 @@ struct ViewController {
     static let following = "FollowingRecipesTableViewController"
 }
 
-
-// Mark: - TableView
-struct TableViewCell {
+    // Mark: - TableView
+    struct TableViewCell {
 
     // Mark: - TableView Class
     struct ClassName {
+
+        // Mark: - Home
         static let trending = "TrendingRecipiesTableViewCell"
         static let following = "FollowingRecipiesTableViewCell"
+
+        // Mark: - ProfileInfo
         static let dieatary = "DieataryTableViewCell"
         static let allergies = "AllergiesTableViewCell"
+
+        // Mark: - RecipeDetail
+        static let cookWare = "hideCookWareTableViewCell"
+        static let ingredients = "IngredientsTableViewCell"
+        static let preparation = "PreparationTableViewCell"
+
+        // Mark: - AddRecipe
+        static let addCookWare = "AddCookWareTableViewCell"
+        static let addIngredient = "AddIngredientTableViewCell"
+        static let addStep = "AddStepTableViewCell"
     }
 
     // Mark: - TableView ReuseIdentifier
     struct ReuseIdentifier {
+        // Mark: - Home
         static let trending = "TrendingCell"
         static let following = "FollowingCell"
+
+        // Mark: - ProfileInfo
         static let dieatary = "DieataryCell"
         static let allergies  = "AllergiesCell"
+
+        // Mark: - RecipeDetail
+        static let cookWare = "hideCookWareCell"
+        static let ingredients = "Ingredients"
+        static let preparation = "PreparationCell"
+
+        // Mark: - AddRecipe
+         static let addCookWare = "AddCookWareCell"
+         static let addIngredient = "AddIngredientCell"
+         static let addStep = "AddStepCell"
+
     }
 }
 
@@ -87,7 +122,8 @@ struct XibName {
     static let callNameView = "CallNameView"
     static let userNameView = "UserNameView"
     static let dieatrayRestrictionView = "DietaryRestrictionsView"
-    static let allergiesView = "AllergiesView" 
+    static let allergiesView = "AllergiesView"
+    static let sipnnerView = "SpinnerView"
 }
 
 // Mark: - Keyboard
@@ -99,5 +135,3 @@ struct KeyBoard {
 struct TabBar {
     static let tabBarStoryBoardId = "TabBar"
 }
-
-

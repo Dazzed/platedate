@@ -11,7 +11,8 @@ import UIKit
 class DieataryTableViewCell: UITableViewCell {
 
     @IBOutlet var dieataryLabel: UILabel!
-    
+    //@IBOutlet var selectImageView: UIImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

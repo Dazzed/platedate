@@ -18,9 +18,6 @@ struct Constants {
 struct PassValue {
     static var mobile = ""
     static var email = ""
+    static var otp = ""
+    static var indexTapped:Bool = true
 }
-
-
-
-
-

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Semibold.otf">
+            <string>SourceSansPro-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PreparationCell" rowHeight="68" id="KGk-i7-Jjw" customClass="PreparationTableViewCell" customModule="PlateDate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="349" height="68"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2V-eU-Dc9">
+                        <rect key="frame" x="10" y="10" width="324" height="48"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vu4-BP-9KS" customClass="CircleLabel" customModule="PlateDate" customModuleProvider="target">
+                                <rect key="frame" x="10" y="13" width="17" height="17"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.65490196079999996" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="17" id="1Kt-AX-L9x"/>
+                                    <constraint firstAttribute="height" constant="17" id="yaK-wh-2ag"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cut the cucumber" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LD2-O7-plV">
+                                <rect key="frame" x="40" y="17.5" width="269" height="17.5"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="14"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LD2-O7-plV" firstAttribute="top" secondItem="vu4-BP-9KS" secondAttribute="centerY" constant="-4" id="Cbo-Ak-Fef"/>
+                            <constraint firstAttribute="trailing" secondItem="LD2-O7-plV" secondAttribute="trailing" constant="15" id="EwG-rv-MwP"/>
+                            <constraint firstItem="vu4-BP-9KS" firstAttribute="top" secondItem="v2V-eU-Dc9" secondAttribute="top" constant="13" id="ZCB-Ta-qnz"/>
+                            <constraint firstAttribute="bottom" secondItem="LD2-O7-plV" secondAttribute="bottom" constant="13" id="ZVu-Ke-dc8"/>
+                            <constraint firstItem="vu4-BP-9KS" firstAttribute="leading" secondItem="v2V-eU-Dc9" secondAttribute="leading" constant="10" id="gfu-cm-Xew"/>
+                            <constraint firstItem="LD2-O7-plV" firstAttribute="leading" secondItem="vu4-BP-9KS" secondAttribute="trailing" constant="13" id="isg-xN-xUm"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.20000000000000001" height="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="v2V-eU-Dc9" secondAttribute="bottom" constant="10" id="GUS-HF-hnd"/>
+                    <constraint firstItem="v2V-eU-Dc9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="HsT-hb-abk"/>
+                    <constraint firstItem="v2V-eU-Dc9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="OY4-Tq-GCM"/>
+                    <constraint firstAttribute="trailing" secondItem="v2V-eU-Dc9" secondAttribute="trailing" constant="15" id="gXQ-ak-I3w"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="countLabel" destination="vu4-BP-9KS" id="Ib4-bW-7Cr"/>
+                <outlet property="preparationLabel" destination="LD2-O7-plV" id="ohs-9t-Xzi"/>
+            </connections>
+            <point key="canvasLocation" x="-70.5" y="-123"/>
+        </tableViewCell>
+    </objects>
+</document>

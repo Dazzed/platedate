@@ -9,23 +9,85 @@
 import UIKit
 import CoreData
 import FBSDKLoginKit
+import ParseFacebookUtilsV4
+import Parse
+import IQKeyboardManagerSwift
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate { 
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        // Mark: - Facebook
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        // Mark: - Facebooksa
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        
+//        let parseConfig = ParseClientConfiguration {
+//            $0.applicationId = "4oZLIvHYbqOJxXDPzqBZ3mlJ6EPYWIOQoUaL57fN"
+//            $0.clientKey = "GoRbjXQXUnR4AduQorgjCjOP5ONQfUQEaXJ7oY7L"
+//            $0.server = "https://pg-app-jangz55flypj0s6vj9ygbi05egv1j0.scalabl.cloud/1/"
+//        }
+        //Parse.initialize(with: parseConfig)
+
+        let parseConfig = ParseClientConfiguration {
+            $0.applicationId = "4oZLIvHYbqOJxXDPzqBZ3mlJ6EPYWIOQoUaL57fN"
+            $0.clientKey = "GoRbjXQXUnR4AduQorgjCjOP5ONQfUQEaXJ7oY7L"
+            $0.server = "https://pg-app-jangz55flypj0s6vj9ygbi05egv1j0.scalabl.cloud/1/"
+        }
+        Parse.initialize(with: parseConfig)
+
+         //PFAnalytics.trackAppOpened(launchOptions: launchOptions)
+       //Parse.setApplicationId("4oZLIvHYbqOJxXDPzqBZ3mlJ6EPYWIOQoUaL57fN", clientKey:"GoRbjXQXUnR4AduQorgjCjOP5ONQfUQEaXJ7oY7L")
+        PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
+
+//        //Parse.setApplicationId("4oZLIvHYbqOJxXDPzqBZ3mlJ6EPYWIOQoUaL57fN", clientKey: "GoRbjXQXUnR4AduQorgjCjOP5ONQfUQEaXJ7oY7L")
+//      //  PFAnalytics.trackAppOpened(launchOptions: launchOptions)
+//        PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
+//        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+//
+//         PFUser.enableRevocableSessionInBackground()
+
         return true
     }
 
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
+
+
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//        // Override point for customization after application launch.
+//        // Mark: - Facebooksa
+//        IQKeyboardManager.shared.enable = true
+//        IQKeyboardManager.shared.enableAutoToolbar = false
+//
+//      //  Parse.setApplicationId("4oZLIvHYbqOJxXDPzqBZ3mlJ6EPYWIOQoUaL57fN", clientKey: "4oZLIvHYbqOJxXDPzqBZ3mlJ6EPYWIOQoUaL57fN")
+//
+//         let parseConfig = ParseClientConfiguration {
+//            $0.applicationId = "4oZLIvHYbqOJxXDPzqBZ3mlJ6EPYWIOQoUaL57fN"
+//            $0.clientKey = "4oZLIvHYbqOJxXDPzqBZ3mlJ6EPYWIOQoUaL57fN"
+//            $0.server = "https://pg-app-jangz55flypj0s6vj9ygbi05egv1j0.scalabl.cloud/1/"
+//        }
+//
+//        Parse.initialize(with: parseConfig)
+//
+//        PFAnalytics.trackAppOpened(launchOptions: launchOptions)
+//        PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
+//        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+//
+//       // FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+//
+//       // Parse.initialize(with: parseConfig)
+//      //  PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
+//        return true
+//    }
+//
+//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+//        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -36,12 +98,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
-
+            
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
+         FBSDKAppEvents.activateApp()
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
@@ -97,55 +160,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-extension AppDelegate {
-
-    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
-        if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
-            let url = userActivity.webpageURL!
-            let _ = url.query ?? ""
-                let navigationController = self.window?.rootViewController as! UINavigationController
-                let secondViewController = UIStoryboard(name: "ProfileInfo", bundle: nil).instantiateViewController(withIdentifier: "Slide")
-                navigationController.pushViewController(secondViewController, animated: true)
-
-            return true
-        }
-        return false
-    }
-
-//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-// var isUniversalLinkClick: Bool = false
-// if launchOptions[UIApplicationLaunchOptionsUserActivityDictionaryKey] {
-// let activityDictionary = launchOptions[UIApplicationLaunchOptionsUserActivityDictionaryKey] as? [AnyHashable: Any] ?? [AnyHashable: Any]()
-// let activity = activityDictionary["UIApplicationLaunchOptionsUserActivityKey"] as? NSUserActivity ?? NSUserActivity()
-// if activity != nil {
-// isUniversalLinkClick = true
-// }
-// }
-// if isUniversalLinkClick {
-// // app opened via clicking a universal link.
-// } else {
-// // set the initial viewcontroller
-// }
-// return true
-//}
-
-
-
-//   func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+//extension AppDelegate {
+//
+//    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
 //        if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
 //            let url = userActivity.webpageURL!
-//            presentCustomViewController(url: url)
-//       }
-//        return true
+//            let _ = url.query ?? ""
+//                let navigationController = self.window?.rootViewController as! UINavigationController
+//                let secondViewController = UIStoryboard(name: "ProfileInfo", bundle: nil).instantiateViewController(withIdentifier: "Slide")
+//                navigationController.pushViewController(secondViewController, animated: true)
+//
+//            return true
+//        }
+//        return false
 //    }
-
-    func presentCustomViewController(url:URL){
-        guard let components = URLComponents(url: url, resolvingAgainstBaseURL: true) else { return }
-        guard components.host != nil else {
-            return
-        }
-        let navigationController = self.window?.rootViewController as! UINavigationController
-        let secondViewController = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "EmailLogin")
-        navigationController.pushViewController(secondViewController, animated: true)
-    }
-}
+//
+//    func presentCustomViewController(url:URL){
+//        guard let components = URLComponents(url: url, resolvingAgainstBaseURL: true) else { return }
+//        guard components.host != nil else {
+//            return
+//        }
+//        let navigationController = self.window?.rootViewController as! UINavigationController
+//        let secondViewController = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "EmailLogin")
+//        navigationController.pushViewController(secondViewController, animated: true)
+//    }
+//}

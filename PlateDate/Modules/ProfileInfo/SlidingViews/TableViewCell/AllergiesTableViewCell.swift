@@ -11,10 +11,10 @@ import UIKit
 class AllergiesTableViewCell: UITableViewCell {
     
     @IBOutlet var allergiesLabel: UILabel!
-
+    @IBOutlet var selectImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

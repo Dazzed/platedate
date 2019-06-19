@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Bold.otf">
+            <string>SourceSansPro-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="bookMarkCollectionCell" id="Kek-dI-Ex4" customClass="BookMarkCollectionViewCell" customModule="PlateDate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="208" height="237"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="208" height="237"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLD-9Y-1fX">
+                        <rect key="frame" x="0.0" y="0.0" width="208" height="199"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="spe-Vh-jvd">
+                                <rect key="frame" x="0.0" y="0.0" width="208" height="199"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="spe-Vh-jvd" firstAttribute="leading" secondItem="DLD-9Y-1fX" secondAttribute="leading" id="6f7-Gz-d5F"/>
+                            <constraint firstItem="spe-Vh-jvd" firstAttribute="top" secondItem="DLD-9Y-1fX" secondAttribute="top" id="R3X-40-Yuu"/>
+                            <constraint firstAttribute="bottom" secondItem="spe-Vh-jvd" secondAttribute="bottom" id="gdx-zo-lUk"/>
+                            <constraint firstAttribute="trailing" secondItem="spe-Vh-jvd" secondAttribute="trailing" id="umk-qB-Njk"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="0.20000000000000001"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tajín-Lime Cucumb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0B-vO-67z">
+                        <rect key="frame" x="0.0" y="207" width="208" height="30"/>
+                        <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="14"/>
+                        <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="R0B-vO-67z" secondAttribute="bottom" id="0yT-dy-wrJ"/>
+                <constraint firstItem="DLD-9Y-1fX" firstAttribute="leading" secondItem="Kek-dI-Ex4" secondAttribute="leading" id="8pj-em-tOn"/>
+                <constraint firstItem="R0B-vO-67z" firstAttribute="leading" secondItem="Kek-dI-Ex4" secondAttribute="leading" id="KPu-mQ-vtc"/>
+                <constraint firstItem="DLD-9Y-1fX" firstAttribute="height" secondItem="Kek-dI-Ex4" secondAttribute="height" multiplier="0.84" id="Pux-eW-yHR"/>
+                <constraint firstAttribute="trailing" secondItem="R0B-vO-67z" secondAttribute="trailing" id="X2c-SN-vET"/>
+                <constraint firstItem="R0B-vO-67z" firstAttribute="top" secondItem="DLD-9Y-1fX" secondAttribute="bottom" constant="8" id="gZP-xI-tEw"/>
+                <constraint firstAttribute="trailing" secondItem="DLD-9Y-1fX" secondAttribute="trailing" id="kDp-PS-M3o"/>
+                <constraint firstItem="DLD-9Y-1fX" firstAttribute="top" secondItem="Kek-dI-Ex4" secondAttribute="top" id="x7y-wC-rLZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="W1C-ge-g7A"/>
+            <size key="customSize" width="472" height="268"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="bookMarkRecipeImageView" destination="spe-Vh-jvd" id="fUe-dG-JrY"/>
+                <outlet property="bookMarkRecipeTitle" destination="R0B-vO-67z" id="OBX-7o-aod"/>
+            </connections>
+            <point key="canvasLocation" x="279" y="-211.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="2.jpg" width="1500" height="1125"/>
+    </resources>
+</document>

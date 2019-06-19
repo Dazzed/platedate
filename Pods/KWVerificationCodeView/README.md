@@ -1,6 +1,6 @@
 # KWVerificationCodeView
 
-[![Build Status](https://www.bitrise.io/app/df05a5313a9741ef.svg?token=NNC-GCKiEh6G4w7MJ6bM5Q&branch=master)](https://www.bitrise.io/app/df05a5313a9741ef)
+[![Build Status](https://app.bitrise.io/app/df05a5313a9741ef/status.svg?token=NNC-GCKiEh6G4w7MJ6bM5Q&branch=master)](https://app.bitrise.io/app/df05a5313a9741ef)
 [![Version](https://img.shields.io/cocoapods/v/KWVerificationCodeView.svg?style=flat)](http://cocoapods.org/pods/KWVerificationCodeView)
 [![License](https://img.shields.io/cocoapods/l/KWVerificationCodeView.svg?style=flat)](http://cocoapods.org/pods/KWVerificationCodeView)
 [![Platform](https://img.shields.io/cocoapods/p/KWVerificationCodeView.svg?style=flat)](http://cocoapods.org/pods/KWVerificationCodeView)
@@ -25,6 +25,12 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "KWVerificationCodeView"
 ```
+
+Or for xcode 9 use:
+```ruby
+pod "KWVerificationCodeView", '0.2.0'
+```
+
 ## Usage
 
 Add a `UIView` in your *Storyboard* and change the class to `KWVerificationCodeView`. You can set the properties in the *Attributes Inspector* and see a live preview:
@@ -51,6 +57,13 @@ The properties which can be directly set in the *Attributes Inspector* and their
 
 - `Dark Keyboard` - Default Keyboard Appearance
 
+Customizable properties
+
+- `keyboardType` - Sets the keyboard type (Defaults to Number Pad when not set)
+
+	  verificationCodeView.keyboardType = UIKeyboardType.emailAddress
+
+
 ### Variables
 
 The `KWVerificationCodeView` has the following variables:
@@ -70,6 +83,10 @@ Returns true when the entered code is valid.
 	getVerificationCode() -> String
 
 Returns the validation code.
+
+	clear()
+
+Clears the verification code view and first field becomes first responder
 
 ### Protocols
 

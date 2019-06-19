@@ -352,7 +352,7 @@ public enum ScrollableSegmentedControlSegmentStyle: Int {
         } else if selectedAttributes != nil {
             fontAttributes = selectedAttributes!
         } else {
-            fontAttributes =  [NSAttributedStringKey.font: BaseSegmentCollectionViewCell.defaultFont]
+            fontAttributes =  [NSAttributedStringKey.font: BaseSegmentCollectionViewCell.defaultFont ?? ""]
         }
         
         let size = (text as NSString).size(withAttributes: fontAttributes)
@@ -384,6 +384,21 @@ public enum ScrollableSegmentedControlSegmentStyle: Int {
                 let indexPath = IndexPath(item: selectedSegmentIndex, section: 0)
                 collectionView_.selectItem(at: indexPath, animated: true, scrollPosition: .left)
             }
+        }
+    }
+
+     func removeAll() {
+        if let collectionView_ = collectionView {
+            //selectedSegmentIndex = 0
+            segmentsData.removeAll()
+            collectionView_.reloadData()
+        }
+    }
+
+    func updateSegemnt(index:Int, value:String) {
+        if let collectionView_ = collectionView {
+            segmentsData[index].title = value
+            collectionView_.reloadData()
         }
     }
     

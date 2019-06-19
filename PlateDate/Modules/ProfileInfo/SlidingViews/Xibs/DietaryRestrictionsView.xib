@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,20 +22,23 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any dietary restrictions?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tET-Tv-wkc">
-                    <rect key="frame" x="80" y="45" width="215" height="26"/>
+                    <rect key="frame" x="80" y="45" width="215" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="9XY-uQ-fSx"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="20"/>
                     <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JPG-kb-Qsy" customClass="TPKeyboardAvoidingTableView">
-                    <rect key="frame" x="0.0" y="110" width="375" height="537"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JPG-kb-Qsy">
+                    <rect key="frame" x="0.0" y="100" width="375" height="547"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="tET-Tv-wkc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="25" id="SqJ-4a-rrc"/>
-                <constraint firstItem="JPG-kb-Qsy" firstAttribute="top" secondItem="tET-Tv-wkc" secondAttribute="bottom" constant="39" id="YcN-P7-RVI"/>
+                <constraint firstItem="JPG-kb-Qsy" firstAttribute="top" secondItem="tET-Tv-wkc" secondAttribute="bottom" constant="30" id="YcN-P7-RVI"/>
                 <constraint firstItem="tET-Tv-wkc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aon-3H-XXJ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JPG-kb-Qsy" secondAttribute="trailing" id="e9c-v6-GYw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="JPG-kb-Qsy" secondAttribute="bottom" constant="20" id="fOq-Ua-6FI"/>

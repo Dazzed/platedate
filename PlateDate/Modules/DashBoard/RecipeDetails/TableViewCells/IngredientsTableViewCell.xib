@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Semibold.otf">
+            <string>SourceSansPro-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Ingredients" rowHeight="61" id="KGk-i7-Jjw" customClass="IngredientsTableViewCell" customModule="PlateDate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="61"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="349" height="60.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fm4-tT-XJz">
+                        <rect key="frame" x="45" y="21.5" width="34" height="18"/>
+                        <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="14"/>
+                        <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circlePlus" translatesAutoresizingMaskIntoConstraints="NO" id="WAT-dx-o9n">
+                        <rect key="frame" x="15" y="20.5" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="aPQ-bX-njN"/>
+                            <constraint firstAttribute="width" constant="20" id="bbM-52-LNb"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WAT-dx-o9n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="0nG-cG-Uvk"/>
+                    <constraint firstItem="fm4-tT-XJz" firstAttribute="leading" secondItem="WAT-dx-o9n" secondAttribute="trailing" constant="10" id="2j8-Oh-HCC"/>
+                    <constraint firstItem="WAT-dx-o9n" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4Ah-Ym-MJM"/>
+                    <constraint firstItem="fm4-tT-XJz" firstAttribute="centerY" secondItem="WAT-dx-o9n" secondAttribute="centerY" id="4Kf-4K-zj8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+            <connections>
+                <outlet property="ingredientAddImageView" destination="WAT-dx-o9n" id="M9s-4Q-Kmd"/>
+                <outlet property="ingredientsName" destination="fm4-tT-XJz" id="Ov6-3f-WrM"/>
+            </connections>
+            <point key="canvasLocation" x="-48.5" y="81.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circlePlus" width="32" height="32"/>
+    </resources>
+</document>

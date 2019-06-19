@@ -4,20 +4,23 @@
 target 'PlateDate' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  
-  pod 'TPKeyboardAvoiding', '~> 1.3'
-  pod 'Kingfisher', ' 4.7.0'
-  pod 'Alamofire', '~> 4.7'
-  pod 'SwiftyJSON', '~> 4.0'
-  pod 'FacebookLogin’
-  pod 'FacebookCore'
-  pod 'FacebookShare'
-  pod "RealmSwift"
-  pod 'PageMenu'
-  pod 'KWVerificationCodeView'
 
+  pod 'Kingfisher', '4.7.0'
+  pod 'FBSDKCoreKit', '~> 4.38.0'
+  pod 'FBSDKLoginKit', '~> 4.38.0'
+  pod 'RealmSwift'
+  pod 'KWVerificationCodeView'
+  pod 'EasyPopUp'
+  pod 'ImagePicker'
+  pod 'SendGrid-Swift'
+  pod 'Parse'
+  pod 'Alamofire'
+  pod "TableViewDragger"
+  pod 'Realm'
+  pod 'IQKeyboardManagerSwift'
+  pod 'TPKeyboardAvoiding'
 end
-	
+
   post_install do |installer|
   installer.pods_project.build_configurations.each do |config|
     config.build_settings.delete('CODE_SIGNING_ALLOWED')

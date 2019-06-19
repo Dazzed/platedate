@@ -16,6 +16,12 @@ extension UIViewController {
         self.navigationController?.pushViewController(secondViewController, animated: true)
     }
 
+      //MARK: - navigationPush Redirect Page Auto login
+    func navigationPushAutoRedirect(storyBoardName:String, storyBoardId:String) {
+        let secondViewController = UIStoryboard(name: storyBoardName, bundle: nil).instantiateViewController(withIdentifier: storyBoardId)
+        self.navigationController?.pushViewController(secondViewController, animated: false)
+    }
+
     //MARK: - Redirect Page
     func redirect(storyBoardName:String, storyBoardId:String) {
         let controller = UIStoryboard(name: storyBoardName, bundle: nil).instantiateViewController(withIdentifier: storyBoardId)
@@ -57,5 +63,47 @@ extension UIViewController {
         tableView.tableHeaderView?.frame.size = CGSize(width: tableView.tableHeaderView!.frame.size.width, height: tableHeight)
         return tableHeight
     }
-}
 
+    //Mark: - Random Generate OTP Number
+    func generateRandomDigits(_ digitNumber: Int) -> String {
+        var number = ""
+        for i in 0..<digitNumber {
+            var randomNumber = arc4random_uniform(10)
+            while randomNumber == 0 && i == 0 {
+                randomNumber = arc4random_uniform(10)
+            }
+            number += "\(randomNumber)"
+        }
+        return number
+    }
+
+     // MARK: - Random String for Username and Password (username and password for must be needed for user generation in Parse)
+    func randomString(length: Int) -> String {
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        var randomString = ""
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        return randomString
+    }
+
+    //MARK: - Calculate Time
+    func currentTime(time:String) ->String {
+        let time = moment(time, "YYYY-MM-DD hh:mm:ss")
+        return time.fromNow()
+    }
+
+     func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+}

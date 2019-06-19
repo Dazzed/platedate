@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Bold.otf">
+            <string>SourceSansPro-Bold</string>
+        </array>
+        <array key="SourceSansPro-Semibold.otf">
+            <string>SourceSansPro-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NutritionCell" rowHeight="42" id="KGk-i7-Jjw" customClass="NutritionFactsTableViewCell" customModule="PlateDate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="315" height="42"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="315" height="41.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0l8-L2-LeN">
+                        <rect key="frame" x="0.0" y="7.5" width="315" height="26.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3h-b0-rkb">
+                                <rect key="frame" x="23" y="4.5" width="50.5" height="18"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="14"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVx-AH-q9P">
+                                <rect key="frame" x="81" y="4.5" width="13.5" height="18"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="13"/>
+                                <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1% " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szr-ao-2QL">
+                                <rect key="frame" x="269.5" y="4.5" width="22.5" height="18"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="14"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="b3h-b0-rkb" firstAttribute="centerY" secondItem="0l8-L2-LeN" secondAttribute="centerY" id="66c-LM-rTl"/>
+                            <constraint firstItem="iVx-AH-q9P" firstAttribute="leading" secondItem="b3h-b0-rkb" secondAttribute="trailing" constant="7.5" id="6hB-5t-hkR"/>
+                            <constraint firstAttribute="trailing" secondItem="Szr-ao-2QL" secondAttribute="trailing" constant="23" id="OaN-1M-bPV"/>
+                            <constraint firstItem="iVx-AH-q9P" firstAttribute="bottom" secondItem="b3h-b0-rkb" secondAttribute="bottom" id="UHn-fc-KXV"/>
+                            <constraint firstItem="iVx-AH-q9P" firstAttribute="top" secondItem="b3h-b0-rkb" secondAttribute="top" id="pcE-9c-bzf"/>
+                            <constraint firstItem="b3h-b0-rkb" firstAttribute="leading" secondItem="0l8-L2-LeN" secondAttribute="leading" constant="23" id="tWk-yY-3ow"/>
+                            <constraint firstItem="Szr-ao-2QL" firstAttribute="centerY" secondItem="0l8-L2-LeN" secondAttribute="centerY" id="u2d-Bw-CIg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0l8-L2-LeN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7.5" id="acR-c2-5R7"/>
+                    <constraint firstItem="0l8-L2-LeN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bQS-Z9-SeT"/>
+                    <constraint firstAttribute="trailing" secondItem="0l8-L2-LeN" secondAttribute="trailing" id="hY5-z7-mqH"/>
+                    <constraint firstAttribute="bottom" secondItem="0l8-L2-LeN" secondAttribute="bottom" constant="7.5" id="u1w-Ir-bTd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nutritionAmountLabel" destination="iVx-AH-q9P" id="0zq-6T-3FO"/>
+                <outlet property="nutritionNameLabel" destination="b3h-b0-rkb" id="cqE-t9-Gqu"/>
+                <outlet property="nutritionPercentage" destination="Szr-ao-2QL" id="k2e-DZ-sfx"/>
+            </connections>
+            <point key="canvasLocation" x="22.5" y="51"/>
+        </tableViewCell>
+    </objects>
+</document>

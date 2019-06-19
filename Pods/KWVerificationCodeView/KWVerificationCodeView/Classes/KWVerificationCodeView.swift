@@ -54,7 +54,7 @@ public protocol KWVerificationCodeViewDelegate: class {
   @IBInspectable public var textSize: CGFloat = 24.0 {
     didSet {
       for textFieldView in textFieldViews {
-        textFieldView.numberTextField.font = UIFont(name:"SourceSansPro-Bold.otf", size:textSize)
+        textFieldView.numberTextField.font = UIFont.systemFont(ofSize: textSize)
       }
     }
   }
@@ -98,6 +98,14 @@ public protocol KWVerificationCodeViewDelegate: class {
     }
   }
 
+  public var keyboardType: UIKeyboardType = UIKeyboardType.numberPad {
+    didSet {
+      for textFieldView in textFieldViews {
+        textFieldView.numberTextField.keyboardType = keyboardType
+      }
+    }
+  }
+
   // MARK: - IBOutlets
   @IBOutlet var view: UIView!
 
@@ -108,7 +116,7 @@ public protocol KWVerificationCodeViewDelegate: class {
     }
   }
 
-  fileprivate var textFieldViews = [KWTextFieldView]()
+  private var textFieldViews = [KWTextFieldView]()
   private var keyboardAppearance = UIKeyboardAppearance.default
   private var textFieldFont = UIFont.systemFont(ofSize: 24.0)
   private var requiredDigits: UInt8 {
@@ -127,7 +135,7 @@ public protocol KWVerificationCodeViewDelegate: class {
   weak public var delegate: KWVerificationCodeViewDelegate?
 
   // MARK: - Lifecycle
-  override init(frame: CGRect) {
+  override public init(frame: CGRect) {
     super.init(frame: frame)
 
     setup()
@@ -151,12 +159,21 @@ public protocol KWVerificationCodeViewDelegate: class {
 
   public func hasValidCode() -> Bool {
     for textFieldView in textFieldViews {
-      if Int(textFieldView.numberTextField.text!) == nil {
+      if textFieldView.numberTextField.text!.trim() == "" {
         return false
       }
     }
 
     return true
+  }
+
+  public func clear() {
+    for textFieldView in textFieldViews {
+      textFieldView.numberTextField.text = ""
+    }
+
+    textFieldViews[0].activate()
+    delegate?.didChangeVerificationCode()
   }
 
   // MARK: - Private Methods

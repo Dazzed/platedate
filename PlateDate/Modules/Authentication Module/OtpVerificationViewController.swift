@@ -7,27 +7,44 @@
 //
 
 import UIKit
+import Parse
+import Alamofire
 
 class OtpVerificationViewController: UIViewController, UITextFieldDelegate {
 
     // Mark: - @IBOutlets
     @IBOutlet weak var otpTextField: PinCodeTextField!
+    @IBOutlet var numberDisplayLabel: UILabel!
+
+    @IBOutlet weak var spinnerView: UIView!
+    @IBOutlet weak var spinnerImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        LoadSpinnerView()
+    }
+
+    func LoadSpinnerView() {
+        spinnerView.backgroundColor = UIColor.black.withAlphaComponent(0.50)
+        spinnerView.isOpaque = false
+        spinnerImageView.image = UIImage.gif(name: "Spinner")
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        print(PassValue.otp)
         // MARK: - Change Border Color TextField Delegate
         otpTextField.delegate = self
         otpTextField.underlines[0].backgroundColor = UIColor._lightningYellow
         otpTextField.becomeFirstResponder()
         otpTextField.keyboardType = .phonePad
         otpTextField.font = UIFont(name:"SourceSansPro-Bold",size:20)!
+        let numberReplace =  numberDisplayLabel.text!
+        numberDisplayLabel.text = numberReplace.replacingOccurrences(of: "+15555555555", with: PassValue.mobile)
+        spinnerView.isHidden = true 
     }
 
+    // Mark: - Cancel Button Action
     @IBAction func cancelButtonAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
@@ -67,22 +84,52 @@ extension OtpVerificationViewController: PinCodeTextFieldDelegate {
         }
     }
 
+    // MARK: - Email OTP
     func OTPVerify() {
         guard let otp = otpTextField.text?.trimmingCharacters(in: .whitespaces) else {return}
-        print(otp)
-        APIClient.shared.otpVerify(mobile: PassValue.mobile, otp: Double(otp)!,  completion: { (success, error) in
-            if success {
-                self.navigationPushRedirect(storyBoardName: ViewController.StroyBoardName.authentication, storyBoardId: ViewController.StoryBoardId.otpVerificationStoryBoardId)
-                print(User.id)
-                print(User.email)
-                print(User.mobile)
-                print(User.emailVerified)
-                print(User.mobileVerified)
+        if Connectivity.isConnectedToInternet {
+            if PassValue.otp == otp {
+                spinnerView.isHidden = true
+                createUser()
             } else {
-                self.alert(title: "Error", message: "Please Enter Correct OTP Number", cancel: "Dismiss")
-                print(User.message)
+                spinnerView.isHidden = true
+                self.alert(title: "Error", message: "Your OTP number is wrong", cancel: "Dismiss")
             }
+        } else {
+                spinnerView.isHidden = true
+                self.alert(title: "Error", message: "Please Check Your Internet Connection", cancel: "Dismiss")
+        }
+    }
+
+    // MARK: - Create User API
+    func createUser() {
+        let user = PFUser()
+        user["username"] = PassValue.mobile
+        user.password = PassValue.mobile
+        user.signUpInBackground(block: { (succeeded, error) in
+        if let error = error  {
+            print("errorworking\(error.localizedDescription)")
+            if error.localizedDescription == "Account already exists for this username." {
+                self.oldUser()
+            }
+        } else {
+             User.firstLogin = true
+             self.login()
+            }
+            self.spinnerView.isHidden = true
         })
+    }
+
+    // MARK: - Old User
+    func oldUser() {
+        PFUser.logInWithUsername(inBackground: PassValue.mobile, password:PassValue.mobile) { (user, error) in
+            if user != nil {
+                User.firstLogin = false
+                self.login()
+            } else {
+                print(error?.localizedDescription ?? "")
+            }
+        }
     }
 
     func textFieldShouldEndEditing(_ textField: PinCodeTextField) -> Bool {
@@ -91,5 +138,17 @@ extension OtpVerificationViewController: PinCodeTextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: PinCodeTextField) -> Bool {
         return true
+    }
+
+    // MARK: - Resend OTP Action
+    @IBAction func resendOTPAction(_ sender: Any) {
+        PassValue.otp = self.generateRandomDigits(6)
+        let parameters = ["From": API.twilioFromNumber, "To":  "+1\(PassValue.mobile)", "Body": "Platedate OTP code is \(PassValue.otp)"]
+        Alamofire.request(API.twilioUrl, method: .post, parameters: parameters)
+        .authenticate(user: API.twilioAccountSID, password: API.twilioAuthToken)
+        .responseString { response in
+            print(response)
+        }
+        RunLoop.main.run()
     }
 }

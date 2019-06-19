@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-js-o69">
-                    <rect key="frame" x="55" y="109.5" width="266" height="51"/>
+                    <rect key="frame" x="55" y="100.5" width="266" height="51"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qq0-DQ-4a7">
                             <rect key="frame" x="15" y="0.0" width="251" height="51"/>
@@ -50,7 +50,7 @@
                             <real key="value" value="4"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                            <color key="value" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="value" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
@@ -63,7 +63,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="7gf-js-o69" firstAttribute="top" secondItem="Phx-6X-6yD" secondAttribute="bottom" constant="39" id="6fn-4O-hj9"/>
+                <constraint firstItem="7gf-js-o69" firstAttribute="top" secondItem="Phx-6X-6yD" secondAttribute="bottom" constant="30" id="6fn-4O-hj9"/>
                 <constraint firstItem="7gf-js-o69" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="55" id="E9H-Z9-GS8"/>
                 <constraint firstItem="Phx-6X-6yD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MBM-2I-VXk"/>
                 <constraint firstItem="Phx-6X-6yD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="25" id="VqV-rG-tvA"/>

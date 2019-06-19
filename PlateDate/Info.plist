@@ -28,7 +28,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>3</string>
+	<string>36</string>
 	<key>FacebookAppID</key>
 	<string>261145341241311</string>
 	<key>FacebookDisplayName</key>
@@ -57,6 +57,10 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>This app requires access to camera</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app requires access to photo library</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AbrilFatface-Regular.otf</string>
@@ -68,7 +72,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>RecipeDetail</string>
+	<string>Auth</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
